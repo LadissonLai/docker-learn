@@ -1,4 +1,4 @@
-# How to use a dockerfile to build a image.
+# How to build an image.
 
 ## Task
 
