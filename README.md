@@ -4,6 +4,27 @@
 
 ## 0. cpp源文件介绍
 在src文件夹下面有一个cpp文件，实现了整数的加法，我们在docker中使用g++编译器来编译这个文件。
+```cpp
+// add.cpp
+#include <iostream>
+
+int main(int argc, char *argv[])
+{
+    if (argc < 3)
+    {
+        std::cout << "Usage: " << argv[0] << " <num1> <num2>" << std::endl;
+        return 1;
+    }
+    else
+    {
+        int num1 = atoi(argv[1]);
+        int num2 = atoi(argv[2]);
+        std::cout << num1 << " + " << num2 << " = " << num1 + num2
+                  << std::endl;
+    }
+    return 0;
+}
+```
 ## 1. 编写Dockerfile
 在项目的根目录下创建一个名为Dockerfile的文件。在该文件中，编写构建镜像的指令和参数。
 ``` dockerfile
