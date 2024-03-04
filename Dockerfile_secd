@@ -1,7 +1,0 @@
-# 在启动容器后，编译的cpp文件。
-FROM ubuntu:18.04
-COPY ./launch_secd.sh /home/mylaunch.sh 
-RUN echo 'hello world .' > /home/hello.txt && apt update && apt install g++ -y && chmod +x /home/mylaunch.sh
-ENTRYPOINT ["/home/mylaunch.sh"]
-# 默认参数
-CMD ["mul","32","12"]
